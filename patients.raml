@@ -1,0 +1,71 @@
+#%RAML 1.0
+types:
+  TestRecordType:
+    example:
+      strict: true
+      value:
+        PatientId: ABC123
+        Name: John
+        Surname: Muley
+        Mobile: "61440977662"
+        Email: john.muley@email.com
+        TestId: XYZ123
+        TestResult: Negative
+    properties:
+      PatientId:
+        example: Example
+        type: string
+      Name:
+        example: Example
+        type: string
+      Surname:
+        example: Example
+        type: string
+      Mobile:
+        example: Example
+        type: string
+      Email:
+        example: Example
+        type: string
+      TestId:
+        example: Example
+        type: string
+      TestResult:
+        example: Example
+        type: string
+title: Patients API
+description: This API is used for simulating patient related work.
+mediaType:
+  - application/json
+version: "1"
+protocols:
+  - HTTP
+  - HTTPS
+/patients/tests:
+  get:
+    responses:
+      "200":
+        body:
+          items:
+            type: TestRecordType
+  post:
+    body:
+      items:
+        type: TestRecordType
+    responses:
+      "200":
+        body:
+          items:
+            type: TestRecordType
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/39824b58-e59a-4944-9a9c-8570db98ccdd/
+/notifications/patients/tests:
+  post:
+    body:
+      items:
+        type: TestRecordType
+    responses:
+      "200":
+        body:
+          items:
+            type: TestRecordType
+    securedBy: []
