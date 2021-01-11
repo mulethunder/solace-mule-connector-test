@@ -29,4 +29,3 @@ tempK8s/
 deploy.sh
 undeploy.sh
 
-Vagrantfile
