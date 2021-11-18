@@ -41,16 +41,4 @@ Spin up Solace Event Broker
 213985adbb80   solace/solace-pubsub-standard   "/usr/sbin/boot.sh"   3 days ago   Up 2 days   0.0.0.0:1883->1883/tcp, 0.0.0.0:2222->2222/tcp, 0.0.0.0:5672->5672/tcp, 0.0.0.0:8000->8000/tcp, 0.0.0.0:8008->8008/tcp, 0.0.0.0:8080->8080/tcp, 0.0.0.0:9000->9000/tcp, 0.0.0.0:55555->55555/tcp   solace
 
 
-Managing the Docker container
-------
-
-   - Use the container **kubectl** to apply differnet tasks:
-
-        For example:
-
-        - Stop the container:
-            docker container [id] stop
-        - Start the contaiuner:
-            docker container [id] start
-
 If you need any assistance, feel free to [contact me](https://www.linkedin.com/in/citurria/).
