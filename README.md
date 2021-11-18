@@ -7,6 +7,7 @@ This repository contains the Solace MuleSoft Connector Test project. It provides
 Spin up Solace Event Broker
 ------
 
+   - For ful details about how to use this repo, [read this blog](https://mulethunder.blog/2021/01/11/teaching-how-to-use-the-solace-mulesoft-connector/).  
    - Ensure you have installed Vagrant on your laptop/PC. If you need help, [read this blog](https://mulethunder.blog/2021/01/08/teaching-how-to-use-vagrant-to-simplify-building-local-dev-and-test-environments/). 
 
    - Download or Git clone this Github repo: 
@@ -24,6 +25,13 @@ Spin up Solace Event Broker
    - You can now **vagrant ssh** into the Virtual Machine.
 
             vagrant ssh
+
+   - Run Solace Event Broker as a docker container:
+
+            docker run -d -p 8080:8080 -p 55555:55555 -p:8008:8008 -p:1883:1883 -p:8000:8000 -p:5672:5672 -p:9000:9000 \
+    -p:2222:2222 –shm-size=2g –env username_admin_globalaccesslevel=admin –env username_admin_password=admin \
+    –name=solace solace/solace-pubsub-standard
+
 
    - Solace Event Broker is up and running, confirm that is the case:
 
